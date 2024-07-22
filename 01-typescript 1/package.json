@@ -1,0 +1,24 @@
+{
+  "name": "01-typescript-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-javascript.js",
+  "scripts": {
+    "start": "tsc && node ./dist/index.js",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start:dev": "ts-node index.ts",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
