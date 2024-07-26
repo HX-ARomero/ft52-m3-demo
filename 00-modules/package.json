@@ -1,0 +1,16 @@
+{
+  "name": "00-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "common-exp.js",
+  "scripts": {
+    "start": "ts-node ./src/esm-import.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
