@@ -19,59 +19,72 @@ export const addVideogame = async (req: Request, res: Response) => {
       character_id,
     } = req.body;
 
-    const videogame = new Videogame();
+    const videogameTransaction = await AppDataSource.manager.transaction(
+      "REPEATABLE READ",
+      async (transactionalEntityManager) => {
+        const videogame = new Videogame();
 
-    // Verificar que la plataforma exista y asociar:
-    if (platform_id !== undefined) {
-      const platform = await AppDataSource.manager.findOne(Platform, {
-        where: { id: platform_id },
-      });
-      if (!platform) {
-        return res.status(400).send({
-          error: "Plataforma no encontrada",
-        });
+        // Verificar que la plataforma exista y asociar:
+        if (platform_id !== undefined) {
+          const platform = await AppDataSource.manager.findOne(Platform, {
+            where: { id: platform_id },
+          });
+          if (!platform) {
+            return res.status(400).send({
+              error: "Plataforma no encontrada",
+            });
+          }
+          videogame.platform = platform;
+        }
+
+        // Verificar que los géneros existan y asociar:
+        let genresArray = [];
+        if (genres !== undefined) {
+          genresArray = await AppDataSource.manager.findBy(Genre, {
+            id: In(genres),
+          });
+          if (genresArray.length !== genres.length) {
+            return res
+              .status(400)
+              .send({ error: "Uno o más géneros no encontrados" });
+          }
+          videogame.genres = genresArray;
+        }
+
+        // Verificar que el personaje exista y asociar:
+        if (character_id !== undefined) {
+          const character = await AppDataSource.manager.findOne(Character, {
+            where: { id: character_id },
+          });
+          if (!character) {
+            return res.status(400).send({
+              error: "Personaje no encontrado",
+            });
+          }
+          videogame.character = character;
+        }
+
+        // Asociamos el resto de los atributos:
+        videogame.title = title;
+        videogame.description = description;
+        videogame.releaseDate = releaseDate;
+        videogame.rating = rating;
+        videogame.price = price;
+
+        const result = await transactionalEntityManager
+          .createQueryBuilder()
+          .select("MAX(videogame.inventory", "inventory")
+          .from(Videogame, "videogame")
+          .getRawOne();
+        videogame.inventory = result.inventory < 100 ? 100 : result.inventory + 2;
+
+        // Grabamos en Base de Datos:
+        const savedVideogame = await AppDataSource.manager.save(videogame);
+        return savedVideogame;
       }
-      videogame.platform = platform;
-    }
+    );
 
-    // Verificar que los géneros existan y asociar:
-    let genresArray = [];
-    if (genres !== undefined) {
-      genresArray = await AppDataSource.manager.findBy(Genre, {
-        id: In(genres),
-      });
-      if (genresArray.length !== genres.length) {
-        return res
-          .status(400)
-          .send({ error: "Uno o más géneros no encontrados" });
-      }
-      videogame.genres = genresArray;
-    }
-
-    // Verificar que el personaje exista y asociar:
-    if (character_id !== undefined) {
-      const character = await AppDataSource.manager.findOne(Character, {
-        where: { id: character_id },
-      });
-      if (!character) {
-        return res.status(400).send({
-          error: "Personaje no encontrado",
-        });
-      }
-      videogame.character = character;
-    }
-
-    // Asociamos el resto de los atributos:
-    videogame.title = title;
-    videogame.description = description;
-    videogame.releaseDate = releaseDate;
-    videogame.rating = rating;
-    videogame.price = price;
-
-    // Grabamos en Base de Datos:
-    const savedVideogame = await AppDataSource.manager.save(videogame);
-
-    res.status(201).send(savedVideogame);
+    res.status(201).send(videogameTransaction);
   } catch (error) {
     res.status(500).send({ error: "Error al guardar videojuego" });
   }
