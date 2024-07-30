@@ -18,3 +18,8 @@
 - [12- React Redux](./readmes/m3-12.md)
 - [13- Frontend Avanzado](./readmes/m3-13.md)
 - [14- JavaScript Avanzado](./readmes/m3-14.md)
+
+## Buenas Prácticas
+
+- [Buenas Prácticas - 01 - Introducción](./readmes/01-GoodPractices.md)
+- [Buenas Prácticas - 02](./readmes/02-GoodPractices.md)

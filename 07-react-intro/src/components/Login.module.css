@@ -1,0 +1,11 @@
+.formulary {
+  text-align: right;
+  background-color: rgba(0, 255, 255, 0.1);
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.formText {
+  font-size: 1.2em;
+  padding: 10px;
+}
