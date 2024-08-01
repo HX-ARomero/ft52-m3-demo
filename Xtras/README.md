@@ -23,3 +23,5 @@
 
 - [Buenas Prácticas - 01 - Introducción](./readmes/01-GoodPractices.md)
 - [Buenas Prácticas - 02](./readmes/02-GoodPractices.md)
+- [Buenas Prácticas - 02](./readmes/03-GoodPractices.md)
+- [Buenas Prácticas - 02](./readmes/04-GoodPractices.md)
