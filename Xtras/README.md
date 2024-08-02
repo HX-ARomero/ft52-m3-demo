@@ -23,5 +23,6 @@
 
 - [Buenas Prácticas - 01 - Introducción](./readmes/01-GoodPractices.md)
 - [Buenas Prácticas - 02](./readmes/02-GoodPractices.md)
-- [Buenas Prácticas - 02](./readmes/03-GoodPractices.md)
-- [Buenas Prácticas - 02](./readmes/04-GoodPractices.md)
+- [Buenas Prácticas - 03](./readmes/03-GoodPractices.md)
+- [Buenas Prácticas - 04](./readmes/04-GoodPractices.md)
+- [Buenas Prácticas - 10](./readmes/10-GoodPractices.md)
