@@ -5,7 +5,7 @@ import axios from "axios";
 // Traer todos los personajes:
 // const GETALLCHARACTERS_URL = "https://dragonball-api.com/api/characters";
 const GETALLCHARACTERS_URL =
-  "https://dragonball-api.com/api/characters?page=1&limit=5";
+  "https://dragonball-api.com/api/characters?page=1&limit=10";
 
 export default function Home(props) {
   const [allCharacters, setAllCharacters] = useState([]);

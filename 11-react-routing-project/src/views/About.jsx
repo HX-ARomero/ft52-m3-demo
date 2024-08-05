@@ -6,7 +6,7 @@ export default function About(props) {
     <div className={styles.container}>
       <h2>Sobre la App</h2>
       <hr />
-      <h3>Cohorte FT50 - Junio de 2024</h3>
+      <h3>Cohorte FT52 - Agosto de 2024</h3>
       <h3>Tecnologías y recursos utilizados:</h3>
       <a href="https://es.react.dev/" target="_blank">
         <span>React</span>

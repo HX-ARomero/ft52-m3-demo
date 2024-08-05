@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/styles.module.css";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -10,8 +11,19 @@ export default function Navbar(props) {
       />
       <p>Dragon Ball API</p>
       {/* -----  */}
-      <span>Personajes</span>
-      <span>Sobre la APP</span>
+      <NavLink
+        to="/home"
+        className={({ isActive }) => (isActive ? styles.active : null)}
+      >
+        <span>Personajes</span>
+      </NavLink>
+
+      <NavLink
+        to="/about"
+        className={({ isActive }) => (isActive ? styles.active : null)}
+      >
+        <span>Sobre la APP</span>
+      </NavLink>
     </div>
   );
 }
