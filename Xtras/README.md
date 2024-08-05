@@ -1,6 +1,7 @@
 # Cohorte FT52 - Módulo 3
 
 ## [Métodos de Arrays](./readmes/arrays-metodos.md)
+## [Visual Studio Code - Atajos de Teclado](./readmes/vsc.md)
 
 ## Resúmenes de Clases
 
