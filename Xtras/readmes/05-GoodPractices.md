@@ -1,7 +1,5 @@
 # BUENAS PRÁCTICAS
 
-[Volver a Inicio](../README.md)
-
 ## COMENTAR CORRECTAMENTE NUESTRO CÓDIGO
 
 - No utilizamos comentarios para explicar qué hacemos...
@@ -32,3 +30,9 @@ else return false;
 ```js
 return num % 2 === 0;
 ```
+
+[Volver a Inicio](../README.md)
+
+[Buenas prácticas 04](./04-GoodPractices.md)
+
+[Buenas prácticas 06](./06-GoodPractices.md)

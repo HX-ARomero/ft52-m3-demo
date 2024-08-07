@@ -1,6 +1,7 @@
 # Cohorte FT52 - Módulo 3
 
 ## [Métodos de Arrays](./readmes/arrays-metodos.md)
+
 ## [Visual Studio Code - Atajos de Teclado](./readmes/vsc.md)
 
 ## Resúmenes de Clases
@@ -26,4 +27,9 @@
 - [Buenas Prácticas - 02](./readmes/02-GoodPractices.md)
 - [Buenas Prácticas - 03](./readmes/03-GoodPractices.md)
 - [Buenas Prácticas - 04](./readmes/04-GoodPractices.md)
+- [Buenas Prácticas - 05](./readmes/05-GoodPractices.md)
+- [Buenas Prácticas - 06](./readmes/06-GoodPractices.md)
+- [Buenas Prácticas - 07](./readmes/07-GoodPractices.md)
+- [Buenas Prácticas - 08](./readmes/08-GoodPractices.md)
+- [Buenas Prácticas - 09](./readmes/09-GoodPractices.md)
 - [Buenas Prácticas - 10](./readmes/10-GoodPractices.md)

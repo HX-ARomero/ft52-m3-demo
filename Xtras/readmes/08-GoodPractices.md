@@ -36,6 +36,6 @@ console.log(mix.some((number) => typeof number === "number")); // true
 
 [Volver a Inicio](../README.md)
 
-[Buenas prácticas 05](./05-GoodPractices.md)
-
 [Buenas prácticas 07](./07-GoodPractices.md)
+
+[Buenas prácticas 09](./09-GoodPractices.md)
