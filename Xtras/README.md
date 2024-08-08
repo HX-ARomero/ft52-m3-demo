@@ -1,5 +1,11 @@
 # Cohorte FT52 - Módulo 3
 
+## [Regalos de fin de Módulo 3 🎉🎉🎉](./readmes/regalos.md)
+
+## [Preguntas Multiple Choice para practicar](./readmes/choice.md)
+
+## [Semantic Version](./readmes/semanticVersion.md)
+
 ## [Métodos de Arrays](./readmes/arrays-metodos.md)
 
 ## [Visual Studio Code - Atajos de Teclado](./readmes/vsc.md)
